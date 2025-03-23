@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: open_meteo_api_data
+    database: jws_db_dev  
+    schema: public  
+    tables:
+      - name: weather__hourly_forecast
+      - name: weather__hourly_unit_config
+      - name: weather__location
