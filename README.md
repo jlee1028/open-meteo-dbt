@@ -1,15 +1,11 @@
-Welcome to your new dbt project!
+dbt project for modeling open-meteo data ingested by the [open-meteo-pipeline](https://github.com/jlee1028/open-meteo-pipeline)
 
-### Using the starter project
+#### Models
+- weather__daily_temp_summary creates a view that gets the min, max, and avg temp per day by location and unit of measurement
+- weather__daily_temp_summary_fahrenheit converts all the daily tempuratures in weather__daily_temp_summary to fahrenheit
 
-Try running the following commands:
-- dbt run
-- dbt test
+### Macros
+- unit_converters has macros for converting the measurements of weather variables from one unit to another (e.g. celsius to fahrenheit, inches to centimeters)
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Seeds
+- weather codes from [meteomatics.com](https://www.meteomatics.com/en/api/available-parameters/weather-parameter/general-weather-state/)
